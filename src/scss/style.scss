@@ -178,9 +178,8 @@ button {
 
 .visual {
   padding: calc(5rem + 75px) 5rem 5rem;
-  min-height: 500px;
-  @include flexColumn;
-  justify-content: center;
+  display: flex;
+  align-items: center;
   @include bgCover("visual.jpg");
   background-position: 0 50%;
 }
@@ -265,6 +264,7 @@ button {
 .onstage__title {
   position: relative;
   margin: 5rem 0 3rem;
+  width: 100%;
   text-align: center;
 
   h2 {
@@ -441,7 +441,7 @@ button {
 
 .artist__contents {
   display: flex;
-  flex: 1;
+  width: 100%;
 }
 
 .artist__contents__left {
@@ -506,7 +506,7 @@ button {
       border-left: 0;
       opacity: 0;
       position: absolute;
-      right: 0;
+      right: 20px;
       top: 50%;
       transform: rotate(45deg) translateY(-50%);
       @include defaultTransition;
@@ -574,6 +574,7 @@ button {
   position: relative;
   margin-bottom: 5rem;
   padding: 0 30px;
+  width: 100%;
   text-align: center;
 
   h2 {
@@ -588,6 +589,8 @@ button {
 }
 
 .podium__contents {
+  width: 100%;
+
   ul {
     display: flex;
     justify-content: space-between;
@@ -691,6 +694,7 @@ button {
 }
 
 .podium__subject {
+  display: block;
   position: relative;
   margin-top: auto;
   padding: 1.3rem 1.5rem;
@@ -737,7 +741,6 @@ button {
 
 .news__inner {
   display: flex;
-  flex: 1;
   max-width: 85%;
 }
 
@@ -771,6 +774,7 @@ button {
       }
 
       &:nth-child(3) {
+        width: 100%;
         margin-top: 3rem;
         padding-top: 3rem;
         border-top: 1px solid #dcdcdc;
@@ -806,6 +810,7 @@ button {
 .news__contents__text {
   flex: 1;
   line-height: $lh-default;
+  color: $black;
 
   h3 {
     margin-bottom: 5px;
@@ -960,7 +965,6 @@ button {
 
   .fp-section,
   .fp-tableCell,
-  .visual,
   .onstage,
   .artist,
   .podium,
@@ -1063,8 +1067,8 @@ button {
   }
 
   .visual {
-    padding: 30px;
-    min-height: 400px;
+    padding: 58px 30px 30px;
+    height: 400px;
   }
 
   .onstage {
@@ -1075,6 +1079,10 @@ button {
   .onstage__contents ul {
     flex-direction: column;
     max-width: 100%;
+
+    li {
+      flex: 1 1 auto;
+    }
 
     li + li {
       margin-left: 0;
@@ -1091,12 +1099,13 @@ button {
   }
 
   .artist__title {
+    flex: 1 1 auto;
     margin-bottom: 3rem;
     padding: 0 15px;
     width: auto;
     background-color: transparent;
     text-align: center;
-    color: initial;
+    color: $black;
 
     h2 {
       margin-bottom: 2rem;
@@ -1151,6 +1160,7 @@ button {
   .news__inner {
     flex-direction: column;
     max-width: 100%;
+    width: 100%;
     padding: 0 30px;
   }
 
@@ -1158,7 +1168,7 @@ button {
     width: auto;
     height: auto;
     background-image: none;
-    color: initial;
+    color: $black;
     font-size: 3rem;
     font-weight: normal;
     margin-bottom: 3rem;
@@ -1193,6 +1203,11 @@ button {
     font-size: 8px;
   }
 
+  .visual {
+    padding: 57px 15px 30px;
+    height: 300px;
+  }
+
   .header {
     padding-left: 15px;
     padding-right: 10px;
@@ -1202,7 +1217,6 @@ button {
     right: 5px;
   }
 
-  .visual,
   .onstage {
     padding: 0 15px;
   }

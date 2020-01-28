@@ -22,7 +22,7 @@
 }
 
 @mixin bgUrl($img) {
-  background-image: url("/img/"+$img);
+  background-image: url("../img/"+$img);
 }
 
 @mixin bgCover($img) {
