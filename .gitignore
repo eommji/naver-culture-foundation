@@ -1,8 +1,5 @@
-.vscode
+.*
+.json
+.lock
 build/
 node_modules
-.babelrc
-gulpfile.babel.js
-package-lock.json
-package.json
-yarn.lock
