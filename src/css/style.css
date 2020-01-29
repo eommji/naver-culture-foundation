@@ -1416,7 +1416,8 @@ button {
   }
   .fp-section,
   .fp-tableCell,
-  .fp-tableCell > section {
+  .fp-tableCell > section,
+  .visual {
     height: auto !important;
   }
   .onstage__contents ul li:nth-child(1) .onstage__thumb {
