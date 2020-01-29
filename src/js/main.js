@@ -53,3 +53,20 @@ function responsiveNav() {
 btnNav.addEventListener("click", openNav);
 navDim.addEventListener("click", closeNav);
 window.addEventListener("resize", responsiveNav);
+
+const container = document.getElementById("map");
+const options = {
+  center: new kakao.maps.LatLng(37.385522, 127.123149),
+  level: 3
+};
+const map = new kakao.maps.Map(container, options);
+
+const content = document.querySelector(".map__mark");
+const position = new kakao.maps.LatLng(37.385522, 127.123149);
+const customOverlay = new kakao.maps.CustomOverlay({
+  map: map,
+  position: position,
+  content: content,
+  yAnchor: 1
+});
+customOverlay.setMap(map);
