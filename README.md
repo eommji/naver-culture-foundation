@@ -4,4 +4,4 @@
 * Responsive web
 
 ## Link
-<https://eommji.github.io/naver-culture-foundation>
+<https://eommji.github.io/naver-culture-foundation/index.html>
