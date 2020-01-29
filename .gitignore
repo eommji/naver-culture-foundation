@@ -1,5 +1,3 @@
-.*
-.json
-.lock
 build/
 node_modules
+.env
