@@ -1501,7 +1501,7 @@ button {
   }
   .visual {
     padding: 58px 30px 30px;
-    height: 400px;
+    height: 400px !important;
   }
   .onstage {
     -webkit-box-align: initial;
@@ -1642,7 +1642,7 @@ button {
   }
   .visual {
     padding: 57px 15px 30px;
-    height: 300px;
+    height: 300px !important;
   }
   .header {
     padding-left: 15px;
