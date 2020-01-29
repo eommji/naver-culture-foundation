@@ -6,12 +6,13 @@ import autoprefixer from "gulp-autoprefixer";
 // import bro from "gulp-bro";
 // import babelify from "babelify";
 import ghPages from "gulp-gh-pages";
+import ws from "gulp-webserver";
 
 sass.compiler = require("node-sass");
 
 const routes = {
   html: {
-    src: "src/*.html",
+    src: "index.html",
     dest: "build/"
   },
   img: {
@@ -31,6 +32,9 @@ const routes = {
 };
 
 const clean = () => del(["build/", ".publish"]);
+
+const webserver = () =>
+  gulp.src("build").pipe(ws({ livereload: true, open: true }));
 
 const html = () => gulp.src(routes.html.src).pipe(gulp.dest(routes.html.dest));
 
@@ -74,6 +78,8 @@ const prepare = gulp.series([clean, img]);
 
 const assets = gulp.series([html, styles, js]);
 
+const postDev = gulp.parallel([webserver, watch]);
+
 export const build = gulp.series([prepare, assets]);
-export const dev = gulp.series([build]);
+export const dev = gulp.series([build, postDev]);
 export const deploy = gulp.series([build, gh, clean]);
