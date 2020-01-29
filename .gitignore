@@ -6,4 +6,3 @@ gulpfile.babel.js
 package-lock.json
 package.json
 yarn.lock
-.env
